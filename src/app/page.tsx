@@ -119,14 +119,14 @@ const handleAddTask = useCallback(
     <EmptyState filter={filter} onAddTask={() => openModal('create')} />
   ) : (
     filteredTasks.map((task) => (
-      <TaskItem
-        key={task.id}
-        task={task}
-        onEdit={(t) => openModal('edit', t)}
-        onDelete={handleDeleteTask}
-        onToggle={toggleComplete}
-        onView={(t) => openModal('view', t)}
-      />
+     <TaskItem
+  key={task.id}
+  task={task}
+  onEdit={(t) => openModal('edit', t)}
+  onDelete={handleDeleteTask}
+  onToggle={toggleComplete}
+  onView={(t) => openModal('view', t)}
+/>
     ))
   )}
 </div>

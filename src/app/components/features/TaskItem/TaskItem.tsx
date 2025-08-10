@@ -29,14 +29,14 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onEdit, onDelete, onToggle, o
           className="mt-1"
         />
 
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 cursor-pointer "                 onClick={() => onView(task)}
+>
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <h3
-                className={`text-lg font-semibold cursor-pointer hover:text-indigo-600 ${theme.transitions} ${
+                className={`text-lg font-semibold  hover:text-indigo-600 ${theme.transitions} ${
                   task.completed ? 'line-through text-gray-500' : 'text-gray-800'
                 }`}
-                onClick={() => onView(task)}
               >
                 {task.title}
               </h3>
